@@ -74,6 +74,16 @@ public class GameManager : MonoBehaviour
             {
                 firstBlock.gameObject.SetActive(true);
             }
+            else{
+                foreach (GameObject go in GameObject.FindGameObjectsWithTag("block"))
+                {
+                    if (!go.name.Substring(0, 4).Equals("Wall") && !go.name.Substring(0, 4).Equals("Star"))
+                    {
+                        //Debug.Log("Destroying " + go.name);
+                        Destroy(go);
+                    }
+                }
+            }
             isStarted = true;
             player.SetActive(true);
             os.gameObject.SetActive(true);

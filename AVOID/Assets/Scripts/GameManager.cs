@@ -83,6 +83,14 @@ public class GameManager : MonoBehaviour
             {
                 musicSource.SetActive(true);
             }
+            foreach (GameObject go in GameObject.FindGameObjectsWithTag("block"))
+            {
+                if (!go.name.Substring(0, 4).Equals("Wall") && !go.name.Substring(0, 4).Equals("Star"))
+                {
+                    //in case the player is being revived, this makes sure that all of the blocks (except for the first square block and the walls) are destroyed
+                    Destroy(go);
+                }
+            }
         }
         if (isStarted && Input.touchCount < 1)
         {
@@ -182,14 +190,14 @@ public class GameManager : MonoBehaviour
         shareButton.SetActive(false);
         continueButton.SetActive(false);
         musicSource.SetActive(false);
-        foreach (GameObject go in GameObject.FindGameObjectsWithTag("block"))
-        {
-            if (!go.name.Substring(0, 4).Equals("Wall") && !go.name.Substring(0, 4).Equals("Star"))
-            {
-                //Debug.Log("Destroying " + go.name);
-                Destroy(go);
-            }
-        }
+        //foreach (GameObject go in GameObject.FindGameObjectsWithTag("block"))
+        //{
+        //    if (!go.name.Substring(0, 4).Equals("Wall") && !go.name.Substring(0, 4).Equals("Star"))
+        //    {
+        //        //Debug.Log("Destroying " + go.name);
+        //        Destroy(go);
+        //    }
+        //}
         revivesLeft -= 1;
         int currentGems = PlayerPrefs.GetInt("gems");
         PlayerPrefs.SetInt("gems", currentGems - player.GetComponent<PlayerController>().gemsCollected);

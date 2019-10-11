@@ -1,2 +1,2 @@
 # Avoid
-You're a small ball trying to avoid obstacles on an endless path.
+You're a small circle trying to avoid obstacles in an endless river.

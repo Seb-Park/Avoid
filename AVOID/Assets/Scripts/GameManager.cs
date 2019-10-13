@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public int revivesLeft;
     public PlayerController playerController;
     public string videoID, rewardedVideoID;
+    public GameObject flash;
     //Admob ad;
 
 
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
                         Destroy(go);
                     }
                 }
+                flash.SetActive(false);
             }
             isStarted = true;
             player.SetActive(true);
@@ -127,6 +129,7 @@ public class GameManager : MonoBehaviour
         {
             Handheld.Vibrate();
         }
+        flash.SetActive(true);
         //Vibrate(200);
         scoreBG.SetActive(true);
         if ((int)score > PlayerPrefs.GetInt("AvoidHigh"))

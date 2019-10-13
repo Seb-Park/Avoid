@@ -13,6 +13,8 @@ public class UnlockerMenu : MonoBehaviour
     public Text newSkinName;
     public Text newOrOld;
 
+    public GameObject unlockButton;
+
     public SkinManager sm;
 
     public int[] weights;
@@ -29,7 +31,12 @@ public class UnlockerMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(PlayerPrefs.GetInt("gems")<100){
+            unlockButton.SetActive(false);
+        }
+        else{
+            unlockButton.SetActive(true);
+        }
     }
 
     public void Unlock(){
@@ -53,8 +60,9 @@ public class UnlockerMenu : MonoBehaviour
             newSkin.sprite = sprites[unlockedIndex]; //set the correct sprite
             newSkinName.text = names[unlockedIndex];
 
-
-            PlayerPrefs.SetInt("gems", PlayerPrefs.GetInt("gems") - 100); 
+            //Debug.Log("you first have " + PlayerPrefs.GetInt("gems") + " gems.");
+            PlayerPrefs.SetInt("gems", PlayerPrefs.GetInt("gems") - 100);
+            //Debug.Log("you now have " + PlayerPrefs.GetInt("gems") + " gems.");
             vaultAnimator.enabled = true;
             SaveSystem.SaveBoolArray(sm.unlockedSkins, "skins.seb");
             sm.gameObject.SetActive(wasSMOpenBefore);

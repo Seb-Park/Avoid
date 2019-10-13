@@ -11,11 +11,18 @@ public class MenuManager : MonoBehaviour {
     public RectTransform optionsMenu;
     public RectTransform skinUnlocker;
     public SkinManager skinManager;
+    public GameObject ratingPanel;
 
 
     // Use this for initialization
     void Start () {
         Time.timeScale = 1;
+        PlayerPrefs.SetInt("timesOpenedSinceRating", PlayerPrefs.GetInt("timesOpenedSinceRating") + 1);
+        if(PlayerPrefs.GetInt("timesOpenedSinceRating") >= 15 && PlayerPrefs.GetInt("hasRated")<1)//if you've opened the menu 30 or more times and you haven't rated the game yet
+        {
+            openWindow(ratingPanel);
+            PlayerPrefs.SetInt("timesOpenedSinceRating", 0);
+        }
 	}
 	
 	// Update is called once per frame
@@ -67,5 +74,19 @@ public class MenuManager : MonoBehaviour {
 
     public void addGems(int gemsToAdd){
         PlayerPrefs.SetInt("gems", PlayerPrefs.GetInt("gems") + gemsToAdd);
+    }
+
+    public void closeWindow(GameObject go){
+        go.SetActive(false);
+    }
+
+    public void openWindow(GameObject go)
+    {
+        go.SetActive(true);
+    }
+
+    public void openRatings(){
+        Application.OpenURL("market://details?id=" + Application.identifier);
+        PlayerPrefs.SetInt("hasRated", 1);
     }
 }

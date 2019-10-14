@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
+
 //using admob;
 
 public class GameManager : MonoBehaviour
 {
 
     //App id is: ca-app-pub-5433175531947512~6520101733
-
+    
     public bool isStarted, gameOver, hasUntouched;
     public GameObject player;
     public ObstacleSpawner os;
@@ -127,7 +128,8 @@ public class GameManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("isVibrate") < 1)
         {
-            Handheld.Vibrate();
+            //Handheld.Vibrate();
+            Vibration.Vibrate(100);
         }
         flash.SetActive(true);
         //Vibrate(200);

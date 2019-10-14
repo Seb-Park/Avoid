@@ -1203,9 +1203,9 @@ MonoBehaviour:
   - {fileID: 1811039381}
   - {fileID: 1624460086}
   names:
+  - White
   - Blue
   - Fireball
-  - White
   weights: 02000000050000000a000000
   currentHoveringSkin: 0
   skinsParentScroll: {fileID: 1103768214}
@@ -2823,20 +2823,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   names:
+  - White
   - Blue
   - Fireball
-  - White
   sprites:
+  - {fileID: 21300000, guid: b2db62b8eef9b44c8aef518c8d80e71c, type: 3}
   - {fileID: 21300000, guid: c1db60f801da24d8eaba6ec31e4e40ad, type: 3}
   - {fileID: 21300000, guid: 37777e19b2ae7401d868d42a4e4defb9, type: 3}
-  - {fileID: 21300000, guid: b2db62b8eef9b44c8aef518c8d80e71c, type: 3}
   vaultAnimator: {fileID: 267435217}
   newSkin: {fileID: 2132027611}
   newSkinName: {fileID: 698014105}
   newOrOld: {fileID: 2069362848}
   unlockButton: {fileID: 1409652081}
   sm: {fileID: 312575684}
-  weights: 050000000300000005000000
+  weights: 030000000500000002000000
 --- !u!1 &857300631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4737,7 +4737,7 @@ GameObject:
   - component: {fileID: 1267454722}
   - component: {fileID: 1267454721}
   m_Layer: 5
-  m_Name: BlueSkinIcon
+  m_Name: WhiteSkinIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4776,14 +4776,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.34509805, g: 0.58431375, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: b2db62b8eef9b44c8aef518c8d80e71c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6162,7 +6162,7 @@ GameObject:
   - component: {fileID: 1624460087}
   - component: {fileID: 1624460086}
   m_Layer: 5
-  m_Name: WhiteSkinIcon
+  m_Name: FireSkinIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6282,7 +6282,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 37777e19b2ae7401d868d42a4e4defb9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6807,7 +6807,7 @@ GameObject:
   - component: {fileID: 1811039378}
   - component: {fileID: 1811039381}
   m_Layer: 5
-  m_Name: FireSkinIcon
+  m_Name: BlueSkinIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6902,14 +6902,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.401512, b: 0.34509802, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: c1db60f801da24d8eaba6ec31e4e40ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

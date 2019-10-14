@@ -1449,9 +1449,9 @@ MonoBehaviour:
   gemEffect: {fileID: 7555532810720556462, guid: 69d019084928845029c3a6c431485bcd,
     type: 3}
   skins:
+  - {fileID: 9158573813669020785, guid: 093647a5afdbb4417b97c8f6da492037, type: 3}
   - {fileID: 5210273487784856206, guid: 4b4afed71a4704e52bd1d8aac8cbfe95, type: 3}
   - {fileID: 6101315969002795219, guid: 545119783976642fe96a49ce29e17199, type: 3}
-  - {fileID: 9158573813669020785, guid: 093647a5afdbb4417b97c8f6da492037, type: 3}
   gemsCollected: 0
 --- !u!4 &589018203
 Transform:
@@ -2461,9 +2461,9 @@ MonoBehaviour:
   player: {fileID: 589018200}
   os: {fileID: 1265262893}
   deathEffect:
+  - {fileID: 6379935648377271288, guid: ffd83b96737fc4425844254a4cdead8e, type: 3}
   - {fileID: 6379935648377271288, guid: 9590967c064e2467582dc9290b72ec1e, type: 3}
   - {fileID: 365152151658512838, guid: bc94aac2bbd54478ab14233bcb72fb5b, type: 3}
-  - {fileID: 6379935648377271288, guid: 9590967c064e2467582dc9290b72ec1e, type: 3}
   startText: {fileID: 1595432212}
   restartText: {fileID: 1415156222}
   firstBlock: {fileID: 5620942864731370395}

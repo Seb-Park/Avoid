@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
             scoreText.text = Mathf.Floor(score).ToString("f0");
             gemsText.text = playerController.gemsCollected.ToString();
         }
-        if (Input.touchCount > 0 && !gameOver && !isStarted && Input.GetTouch(0).position.y > 350)
+        if ((Input.touchCount > 0 && !gameOver && !isStarted && Input.GetTouch(0).position.y > 350)||(Input.GetMouseButton(0) && !gameOver && !isStarted))
         {
             //Debug.Log(Input.GetTouch(0).position.y);
             startTime = Time.time - score; //makes it so that if the player restarts then the score is appended
@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
                 musicSource.SetActive(true);
             }
         }
-        if (isStarted && Input.touchCount < 1)
+        if (isStarted && Input.touchCount < 1&&!Input.GetMouseButton(0))
         {
             hasUntouched = true;
             endGame();

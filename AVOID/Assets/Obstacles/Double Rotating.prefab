@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 6049219969103761477}
   m_Layer: 0
   m_Name: Double Rotating
-  m_TagString: Untagged
+  m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   startY: 15
   destructionPoint: {x: 0, y: -10, z: 0}
   gm: {fileID: 0}
+  frozen: 0
 --- !u!1 &6049219969103761621
 GameObject:
   m_ObjectHideFlags: 0

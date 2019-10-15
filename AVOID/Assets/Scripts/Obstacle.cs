@@ -14,7 +14,8 @@ public class Obstacle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        gm = GameObject.Find("GameManager");
+        //gm = GameObject.Find("GameManager");
+        gm = GameObject.FindGameObjectWithTag("GameController");
         ypos = startY;
 	}
 	
@@ -26,13 +27,16 @@ public class Obstacle : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (gm.GetComponent<GameManager>().isStarted&&!frozen) {
+        if (gm.GetComponent<GameManager>().isStarted) {
             ypos -= speed*Time.timeScale;
             //ypos -= speed;
-        if (transform.position.y < destructionPoint.y)
-        {
+            if (transform.position.y < destructionPoint.y)
+            {
                 Destroy(gameObject);
+            }
         }
-    }
+        if(frozen){
+            ypos += speed * Time.timeScale;//cancels out because apparently checking if frozen isn't working
+        }
     }
 }

@@ -24,7 +24,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         if (gm.isStarted)
         {
-            brackeysMove();
+            //brackeysMove();
+            debugMove();
         }
     }
 
@@ -33,6 +34,15 @@ public class PlayerController : MonoBehaviour {
             Touch touch = Input.GetTouch(0);
             touchPosition = camera.ScreenToWorldPoint(touch.position);
             pixelTouchPosition = touch.position;
+            touchPosition.z = 0f;
+            transform.position = Vector3.Slerp(transform.position, touchPosition, 0.5f); ;
+        }
+    }
+
+    public void debugMove(){
+        if (Input.GetMouseButton(0))
+        {
+            touchPosition = camera.ScreenToWorldPoint(Input.mousePosition);
             touchPosition.z = 0f;
             transform.position = Vector3.Slerp(transform.position, touchPosition, 0.5f); ;
         }
@@ -53,12 +63,56 @@ public class PlayerController : MonoBehaviour {
         obstacleSpawner.gameObject.SetActive(false);
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag("block");
         foreach (GameObject obstacle in obstacles){
-            obstacle.GetComponent<Obstacle>().frozen = true;
+            if (obstacle.gameObject.GetComponent<Obstacle>() != null)
+            {
+                obstacle.gameObject.GetComponent<Obstacle>().frozen = true;
+            }
         }
         yield return new WaitForSeconds(5);
         foreach (GameObject obstacle in obstacles)
         {
-            obstacle.GetComponent<Obstacle>().frozen = false;
+            if (obstacle.gameObject.GetComponent<Obstacle>() != null)
+            {
+                obstacle.gameObject.GetComponent<Obstacle>().frozen = false;
+            }
+        }
+        obstacleSpawner.gameObject.SetActive(true);
+    }
+
+    public void stopTimeFor(float dur)
+    {
+        float start = Time.time;
+        obstacleSpawner.gameObject.SetActive(false);
+        GameObject[] blocks = GameObject.FindGameObjectsWithTag("block");
+        Debug.Log(blocks.Length + " is the number of obstacles currently in scene.");
+        //foreach (GameObject obstacle in blocks)
+        //{
+        //    if(obstacle.gameObject.GetComponent<Obstacle>()==null){
+        //        Debug.Log("this obstacle lacks an obstacle component");
+        //    }
+        //    obstacle.gameObject.GetComponent<Obstacle>().frozen = true;
+        //}
+        for (int i = 0; i < blocks.Length; i++){
+            if (blocks[i].gameObject.GetComponent<Obstacle>() == null)
+            {
+
+                Debug.Log("this obstacle " + i + " lacks an obstacle component");
+            }
+            else
+            {
+                blocks[i].GetComponent<Obstacle>().frozen = true;
+            }
+        }
+        while(Time.time - start >= dur){
+            Debug.Log("Waiting...");
+        }
+        Debug.Log("I've waited " + dur + " seconds");
+        foreach (GameObject obstacle in blocks)
+        {
+            if (obstacle.gameObject.GetComponent<Obstacle>() != null)
+            {
+                obstacle.gameObject.GetComponent<Obstacle>().frozen = true;
+            }
         }
         obstacleSpawner.gameObject.SetActive(true);
     }
@@ -79,12 +133,13 @@ public class PlayerController : MonoBehaviour {
         }
         if (collision.gameObject.CompareTag("block"))
         {
-            //Debug.Log("collision is a block");
+            Debug.Log("collision is a block");
             gm.endGame();
         }
         if(collision.gameObject.CompareTag("freezeTime")){
             Destroy(collision.gameObject);
             StartCoroutine(freezeTime(4));
+            //stopTimeFor(5);
 
         }
     }

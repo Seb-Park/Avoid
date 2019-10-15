@@ -101,6 +101,7 @@ MonoBehaviour:
   startY: 15
   destructionPoint: {x: 0, y: -10, z: 0}
   gm: {fileID: 0}
+  frozen: 0
 --- !u!114 &2935598242691914349
 MonoBehaviour:
   m_ObjectHideFlags: 0

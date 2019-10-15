@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour {
     public int gemsCollected;
     public bool frozen;
     public ObstacleSpawner obstacleSpawner;
-
+    public GameObject frozenScreenEffect;
 
     // Use this for initialization
     void Start () {
@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         if (gm.isStarted)
         {
-            //brackeysMove();
-            debugMove();
+            brackeysMove();
+            //debugMove();
         }
     }
 
@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     public IEnumerator freezeTime(float dur){
+        frozenScreenEffect.SetActive(true);
+        frozenScreenEffect.GetComponent<FrozenTimeCanvas>().startTime = Time.time;
         obstacleSpawner.gameObject.SetActive(false);
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag("block");
         foreach (GameObject obstacle in obstacles){
@@ -68,7 +70,7 @@ public class PlayerController : MonoBehaviour {
                 obstacle.gameObject.GetComponent<Obstacle>().frozen = true;
             }
         }
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(dur);
         foreach (GameObject obstacle in obstacles)
         {
             if (obstacle.gameObject.GetComponent<Obstacle>() != null)
@@ -77,6 +79,8 @@ public class PlayerController : MonoBehaviour {
             }
         }
         obstacleSpawner.gameObject.SetActive(true);
+        frozenScreenEffect.SetActive(false);
+
     }
 
     public void stopTimeFor(float dur)
@@ -138,7 +142,8 @@ public class PlayerController : MonoBehaviour {
         }
         if(collision.gameObject.CompareTag("freezeTime")){
             Destroy(collision.gameObject);
-            StartCoroutine(freezeTime(4));
+            StartCoroutine(freezeTime(10));
+            obstacleSpawner.timeToSpawn += 10;
             //stopTimeFor(5);
 
         }

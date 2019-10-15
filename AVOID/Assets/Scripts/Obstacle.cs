@@ -27,7 +27,7 @@ public class Obstacle : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (gm.GetComponent<GameManager>().isStarted) {
+        if (gm.GetComponent<GameManager>().isStarted&&!frozen) {
             ypos -= speed*Time.timeScale;
             //ypos -= speed;
             if (transform.position.y < destructionPoint.y)
@@ -35,8 +35,6 @@ public class Obstacle : MonoBehaviour {
                 Destroy(gameObject);
             }
         }
-        if(frozen){
-            ypos += speed * Time.timeScale;//cancels out because apparently checking if frozen isn't working
-        }
+
     }
 }

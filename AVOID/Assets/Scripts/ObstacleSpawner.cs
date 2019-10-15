@@ -9,6 +9,7 @@ public class ObstacleSpawner : MonoBehaviour {
     public float delay;
     public GameObject[] obstacles;
     public GameObject crystal;
+    public GameObject[] powerups;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +32,14 @@ public class ObstacleSpawner : MonoBehaviour {
         if (randomCrystal == 4)
         {
             Instantiate(crystal, spawnPoint.transform.position, Quaternion.identity);
+
+        }
+        else
+        {
+            randomCrystal = Random.Range(0, 5);
+            if(randomCrystal == 4){
+                Instantiate(powerups[0], spawnPoint.transform.position, Quaternion.identity);
+            }
 
         }
     }

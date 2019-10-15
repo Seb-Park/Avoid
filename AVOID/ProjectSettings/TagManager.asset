@@ -6,6 +6,7 @@ TagManager:
   tags:
   - block
   - Crystal
+  - freezeTime
   layers:
   - Default
   - TransparentFX

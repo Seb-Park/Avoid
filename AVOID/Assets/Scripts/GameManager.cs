@@ -46,16 +46,17 @@ public class GameManager : MonoBehaviour
 
     void changeTime()
     {
-        if (score <= 250)
-        {
-            Time.timeScale = (score / 100) + 1;
-            Time.fixedDeltaTime = Time.timeScale / 50;
-        }
-        else
-        {
-            Time.timeScale = (250 / 100) + 1;
-            Time.fixedDeltaTime = Time.timeScale / 50;
-        }
+
+            if (score <= 250)
+            {
+                Time.timeScale = (score / 100) + 1;
+                Time.fixedDeltaTime = Time.timeScale / 50;
+            }
+            else
+            {
+                Time.timeScale = (250 / 100) + 1;
+                Time.fixedDeltaTime = Time.timeScale / 50;
+            }
     }
 
     // Update is called once per frame

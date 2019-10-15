@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
     public GameObject gemEffect;
     public GameObject[] skins;
     public int gemsCollected;
+    public bool frozen;
+    public ObstacleSpawner obstacleSpawner;
 
 
     // Use this for initialization
@@ -24,7 +26,7 @@ public class PlayerController : MonoBehaviour {
         {
             brackeysMove();
         }
-        }
+    }
 
     public void brackeysMove(){
         if(Input.touchCount>0){
@@ -46,6 +48,21 @@ public class PlayerController : MonoBehaviour {
         }
 
     }
+
+    public IEnumerator freezeTime(float dur){
+        obstacleSpawner.gameObject.SetActive(false);
+        GameObject[] obstacles = GameObject.FindGameObjectsWithTag("block");
+        foreach (GameObject obstacle in obstacles){
+            obstacle.GetComponent<Obstacle>().frozen = true;
+        }
+        yield return new WaitForSeconds(5);
+        foreach (GameObject obstacle in obstacles)
+        {
+            obstacle.GetComponent<Obstacle>().frozen = false;
+        }
+        obstacleSpawner.gameObject.SetActive(true);
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Crystal"))
@@ -53,6 +70,10 @@ public class PlayerController : MonoBehaviour {
             //Debug.Log("collision is a block");
             Destroy(collision.gameObject);
             gemsCollected++;
+            if (PlayerPrefs.GetInt("isVibrate") < 1)
+            {
+                Vibration.Vibrate(20);
+            }
             Instantiate(gemEffect, transform.position, Quaternion.identity);
 
         }
@@ -60,6 +81,11 @@ public class PlayerController : MonoBehaviour {
         {
             //Debug.Log("collision is a block");
             gm.endGame();
+        }
+        if(collision.gameObject.CompareTag("freezeTime")){
+            Destroy(collision.gameObject);
+            StartCoroutine(freezeTime(4));
+
         }
     }
 

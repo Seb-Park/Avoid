@@ -9,6 +9,7 @@ public class Obstacle : MonoBehaviour {
     public float startY=15f;
     public Vector3 destructionPoint = new Vector3(0,-20,0);
     public GameObject gm;
+    public bool frozen;
 
 
 	// Use this for initialization
@@ -25,7 +26,7 @@ public class Obstacle : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (gm.GetComponent<GameManager>().isStarted) {
+        if (gm.GetComponent<GameManager>().isStarted&&!frozen) {
             ypos -= speed*Time.timeScale;
             //ypos -= speed;
         if (transform.position.y < destructionPoint.y)

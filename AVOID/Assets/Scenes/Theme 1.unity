@@ -1453,6 +1453,8 @@ MonoBehaviour:
   - {fileID: 5210273487784856206, guid: 4b4afed71a4704e52bd1d8aac8cbfe95, type: 3}
   - {fileID: 6101315969002795219, guid: 545119783976642fe96a49ce29e17199, type: 3}
   gemsCollected: 0
+  frozen: 0
+  obstacleSpawner: {fileID: 1265262893}
 --- !u!4 &589018203
 Transform:
   m_ObjectHideFlags: 0
@@ -2641,6 +2643,8 @@ MonoBehaviour:
   - {fileID: 3688691157861506303, guid: 79e95a774a0cd42e2a585132924ec4ff, type: 3}
   - {fileID: 411081532031455123, guid: 729ecc8087d124a1bb4a76416ff257f8, type: 3}
   crystal: {fileID: 5283016839111663723, guid: 25c74632bb0e4492293a4616856189f4, type: 3}
+  powerups:
+  - {fileID: 5283016839111663723, guid: 0c7fea68b74cb4558940fa658ef5c4ea, type: 3}
 --- !u!4 &1265262894
 Transform:
   m_ObjectHideFlags: 0

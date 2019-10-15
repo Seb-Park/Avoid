@@ -33,6 +33,9 @@ public static class Vibration
             Handheld.Vibrate();
     }
 
+    public static void unalteredVibrate(){
+        Handheld.Vibrate();
+    }
 
     public static void Vibrate(long milliseconds)
     {

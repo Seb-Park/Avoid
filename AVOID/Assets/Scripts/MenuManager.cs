@@ -89,4 +89,10 @@ public class MenuManager : MonoBehaviour {
         Application.OpenURL("market://details?id=" + Application.identifier);
         PlayerPrefs.SetInt("hasRated", 1);
     }
+    public void longVibrate(){
+        Handheld.Vibrate();
+    }
+    public void shortVibrate(){
+        Vibration.Vibrate(50);
+    }
 }

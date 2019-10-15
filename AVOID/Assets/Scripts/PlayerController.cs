@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public bool frozen;
     public ObstacleSpawner obstacleSpawner;
     public GameObject frozenScreenEffect;
+    public ParticleSystem snow;
 
     // Use this for initialization
     void Start () {
@@ -24,8 +25,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         if (gm.isStarted)
         {
-            brackeysMove();
-            //debugMove();
+            //brackeysMove();
+            debugMove();
         }
     }
 
@@ -60,6 +61,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     public IEnumerator freezeTime(float dur){
+
+        snow.Play();
         frozenScreenEffect.SetActive(true);
         frozenScreenEffect.GetComponent<FrozenTimeCanvas>().startTime = Time.time;
         obstacleSpawner.gameObject.SetActive(false);
@@ -80,7 +83,7 @@ public class PlayerController : MonoBehaviour {
         }
         obstacleSpawner.gameObject.SetActive(true);
         frozenScreenEffect.SetActive(false);
-
+        snow.Stop();
     }
 
     public void stopTimeFor(float dur)
@@ -141,7 +144,10 @@ public class PlayerController : MonoBehaviour {
             gm.endGame();
         }
         if(collision.gameObject.CompareTag("freezeTime")){
-            Destroy(collision.gameObject);
+            foreach (GameObject i in GameObject.FindGameObjectsWithTag("freezeTime"))
+            {
+                Destroy(i);//this makes sure you don't bump into two freeze times
+            }
             StartCoroutine(freezeTime(10));
             obstacleSpawner.timeToSpawn += 10;
             //stopTimeFor(5);

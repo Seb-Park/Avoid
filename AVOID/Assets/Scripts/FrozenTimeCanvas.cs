@@ -21,7 +21,7 @@ public class FrozenTimeCanvas : MonoBehaviour
     {
         float timeLeft = (duration - (Time.time - startTime));
         Color fullBgColor = bg.color;
-        fullBgColor.a = timeLeft / duration;
+        fullBgColor.a = (timeLeft / duration)/2;
         bg.color = fullBgColor;
         slider.value = timeLeft / duration;
         //timeText.text = (int)(timeLeft+1) + "s";

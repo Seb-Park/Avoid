@@ -144,6 +144,7 @@ public class GameManager : MonoBehaviour
         highScoreText.text = PlayerPrefs.GetInt("AvoidHigh").ToString();
         isStarted = false;
         gameOver = true;
+        playerController.clearFrozen();
         Instantiate(deathEffect[PlayerPrefs.GetInt("skin")], player.transform.position, Quaternion.identity);
         player.transform.position = new Vector3(0, 0, 0);
         player.SetActive(false);

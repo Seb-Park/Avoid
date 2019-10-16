@@ -1205,8 +1205,8 @@ MonoBehaviour:
   names:
   - White
   - Blue
-  - Fireball
-  weights: 02000000050000000a000000
+  - Red
+  weights: 020000000500000005000000
   currentHoveringSkin: 0
   skinsParentScroll: {fileID: 1103768214}
   skinsParentImage: {fileID: 1751134377}
@@ -2825,11 +2825,11 @@ MonoBehaviour:
   names:
   - White
   - Blue
-  - Fireball
+  - Red
   sprites:
   - {fileID: 21300000, guid: b2db62b8eef9b44c8aef518c8d80e71c, type: 3}
   - {fileID: 21300000, guid: c1db60f801da24d8eaba6ec31e4e40ad, type: 3}
-  - {fileID: 21300000, guid: 37777e19b2ae7401d868d42a4e4defb9, type: 3}
+  - {fileID: 21300000, guid: c7c9fe46fce734d90b52c478177b9c85, type: 3}
   vaultAnimator: {fileID: 267435217}
   newSkin: {fileID: 2132027611}
   newSkinName: {fileID: 698014105}
@@ -6173,7 +6173,7 @@ GameObject:
   - component: {fileID: 1624460087}
   - component: {fileID: 1624460086}
   m_Layer: 5
-  m_Name: FireSkinIcon
+  m_Name: RedSkinIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6293,7 +6293,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 37777e19b2ae7401d868d42a4e4defb9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7c9fe46fce734d90b52c478177b9c85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -6367,7 +6367,18 @@ MonoBehaviour:
   skins:
   - {fileID: 9158573813669020785, guid: 093647a5afdbb4417b97c8f6da492037, type: 3}
   - {fileID: 5210273487784856206, guid: 4b4afed71a4704e52bd1d8aac8cbfe95, type: 3}
+  - {fileID: 5210273487784856206, guid: 95ed0cda67cd04ba5b2e010e77e7b3cb, type: 3}
+  - {fileID: 5210273487784856206, guid: 348ab23614434425a8ffba7ab92ff92d, type: 3}
+  - {fileID: 5210273487784856206, guid: 1e6db4b977bff42be911eb04bb4337f2, type: 3}
+  - {fileID: 5210273487784856206, guid: 2c64f87ab99b845aa8217d6442c08f64, type: 3}
+  - {fileID: 5210273487784856206, guid: f9f5da9d767d44eadae3a0f2a10b5d9e, type: 3}
+  - {fileID: 5210273487784856206, guid: 3c7f45891c0ad412b9b08df29163d1ff, type: 3}
+  - {fileID: 5210273487784856206, guid: 48e52696e8fd041bab613d4088c16052, type: 3}
   - {fileID: 6101315969002795219, guid: 545119783976642fe96a49ce29e17199, type: 3}
+  - {fileID: 6101315969002795219, guid: 79e1e9cfcf1a14f1fa541d59da36baab, type: 3}
+  - {fileID: 6101315969002795219, guid: 4327fdbfc3b054a3eac3fc84f15cbb05, type: 3}
+  - {fileID: 5210273487784856206, guid: 65529ac4bb5bb44bb8497c403926a281, type: 3}
+  - {fileID: 5210273487784856206, guid: bba14ca24f53f47f88fb592791086e6e, type: 3}
   gemsCollected: 0
   frozen: 0
   obstacleSpawner: {fileID: 1265262893}
@@ -7501,7 +7512,7 @@ MonoBehaviour:
   deathEffect:
   - {fileID: 6379935648377271288, guid: ffd83b96737fc4425844254a4cdead8e, type: 3}
   - {fileID: 6379935648377271288, guid: 9590967c064e2467582dc9290b72ec1e, type: 3}
-  - {fileID: 365152151658512838, guid: bc94aac2bbd54478ab14233bcb72fb5b, type: 3}
+  - {fileID: 6379935648377271288, guid: 743f273689dd44c52b8af96305f06ff6, type: 3}
   startText: {fileID: 1595432212}
   restartText: {fileID: 1415156222}
   firstBlock: {fileID: 5620942864731370395}

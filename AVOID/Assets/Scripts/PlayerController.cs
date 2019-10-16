@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         if (gm.isStarted)
         {
-            brackeysMove();
-            //debugMove();
+            //brackeysMove();
+            debugMove();
         }
     }
 
@@ -86,42 +86,9 @@ public class PlayerController : MonoBehaviour {
         snow.Stop();
     }
 
-    public void stopTimeFor(float dur)
-    {
-        float start = Time.time;
-        obstacleSpawner.gameObject.SetActive(false);
-        GameObject[] blocks = GameObject.FindGameObjectsWithTag("block");
-        Debug.Log(blocks.Length + " is the number of obstacles currently in scene.");
-        //foreach (GameObject obstacle in blocks)
-        //{
-        //    if(obstacle.gameObject.GetComponent<Obstacle>()==null){
-        //        Debug.Log("this obstacle lacks an obstacle component");
-        //    }
-        //    obstacle.gameObject.GetComponent<Obstacle>().frozen = true;
-        //}
-        for (int i = 0; i < blocks.Length; i++){
-            if (blocks[i].gameObject.GetComponent<Obstacle>() == null)
-            {
-
-                Debug.Log("this obstacle " + i + " lacks an obstacle component");
-            }
-            else
-            {
-                blocks[i].GetComponent<Obstacle>().frozen = true;
-            }
-        }
-        while(Time.time - start >= dur){
-            Debug.Log("Waiting...");
-        }
-        Debug.Log("I've waited " + dur + " seconds");
-        foreach (GameObject obstacle in blocks)
-        {
-            if (obstacle.gameObject.GetComponent<Obstacle>() != null)
-            {
-                obstacle.gameObject.GetComponent<Obstacle>().frozen = true;
-            }
-        }
-        obstacleSpawner.gameObject.SetActive(true);
+    public void clearFrozen(){
+        frozenScreenEffect.SetActive(false);
+        snow.Stop();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -140,9 +107,6 @@ public class PlayerController : MonoBehaviour {
         }
         if (collision.gameObject.CompareTag("block"))
         {
-            Debug.Log("collision is a block");
-            frozenScreenEffect.SetActive(false);
-            snow.Stop();
             gm.endGame();
         }
         if(collision.gameObject.CompareTag("freezeTime")){
@@ -152,8 +116,6 @@ public class PlayerController : MonoBehaviour {
             }
             StartCoroutine(freezeTime(10));
             obstacleSpawner.timeToSpawn += 10;
-            //stopTimeFor(5);
-
         }
     }
 

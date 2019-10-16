@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour {
             touchPosition = camera.ScreenToWorldPoint(touch.position);
             pixelTouchPosition = touch.position;
             touchPosition.z = 0f;
-            transform.position = Vector3.Slerp(transform.position, touchPosition, 0.5f); ;
+            transform.position = Vector2.Lerp(transform.position, touchPosition, 0.5f); ;
         }
     }
 
@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
         {
             touchPosition = camera.ScreenToWorldPoint(Input.mousePosition);
             touchPosition.z = 0f;
-            transform.position = Vector3.Slerp(transform.position, touchPosition, 0.5f); ;
+            transform.position = Vector2.Lerp(transform.position, touchPosition, 0.5f); ;
         }
     }
 
@@ -141,6 +141,8 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("block"))
         {
             Debug.Log("collision is a block");
+            frozenScreenEffect.SetActive(false);
+            snow.Stop();
             gm.endGame();
         }
         if(collision.gameObject.CompareTag("freezeTime")){

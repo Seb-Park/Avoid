@@ -7682,7 +7682,7 @@ MonoBehaviour:
   timeToSpawn: 0
   delay: 5
   obstacles:
-  - {fileID: 4789660438846042876, guid: 2f43cec5acecc452ea6c7881964c0ce0, type: 3}
+  - {fileID: 2881909799844175873, guid: 806075f26f8d84197abe7023bce6d505, type: 3}
   - {fileID: 7130775653552001268, guid: ff09c07785a194acd863a0e7d8583fc8, type: 3}
   - {fileID: 6188299077903924308, guid: c4e83948f1bc54053b7026da31c81315, type: 3}
   - {fileID: 6049219969103761619, guid: 8fbf08e4d256a4c96ace7a57e57e02d1, type: 3}

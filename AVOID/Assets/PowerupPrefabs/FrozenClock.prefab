@@ -4855,6 +4855,7 @@ MonoBehaviour:
   startY: 15
   destructionPoint: {x: 0, y: -10, z: 0}
   gm: {fileID: 0}
+  frozen: 0
 --- !u!114 &5283016839111663814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4933,6 +4934,7 @@ MonoBehaviour:
   x2: 1.8
   dx: 0.05
   xpos: 0
+  obstacle: {fileID: 5283016839111663812}
 --- !u!58 &5283016839111663616
 CircleCollider2D:
   m_ObjectHideFlags: 0

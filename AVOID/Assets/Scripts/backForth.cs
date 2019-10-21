@@ -5,6 +5,7 @@ using UnityEngine;
 public class backForth : MonoBehaviour {
 
     public float x1,x2,dx,xpos;
+    public Obstacle obstacle;
 
 	// Use this for initialization
 	void Start () {
@@ -18,9 +19,13 @@ public class backForth : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate () {
-        xpos += dx;
-        if(xpos<=x1||xpos>=x2){
-            dx = -dx;
+        if (!obstacle.frozen)
+        {
+            xpos += dx;
+            if (xpos <= x1 || xpos >= x2)
+            {
+                dx = -dx;
+            }
         }
 	}
 }

@@ -68,17 +68,43 @@ public class PlayerController : MonoBehaviour {
         obstacleSpawner.gameObject.SetActive(false);
         GameObject[] obstacles = GameObject.FindGameObjectsWithTag("block");
         foreach (GameObject obstacle in obstacles){
-            if (obstacle.gameObject.GetComponent<Obstacle>() != null)
+            if (obstacle != null)
             {
-                obstacle.gameObject.GetComponent<Obstacle>().frozen = true;
+                if (obstacle.gameObject.GetComponent<Obstacle>() != null)
+                {
+                    obstacle.gameObject.GetComponent<Obstacle>().frozen = true;
+                }
+                //if (obstacle.gameObject.GetComponent<Animator>() != null)
+                //{
+                //    obstacle.gameObject.GetComponent<Animator>().enabled = false;
+                //}
+                //if (obstacle.gameObject.GetComponent<Rotate>() != null)
+                //{
+                //    obstacle.gameObject.GetComponent<Rotate>().enabled = false;
+                //}
+                else
+                {
+                    Debug.Log("There is no animator on " + obstacle.name);
+                }
             }
         }
         yield return new WaitForSeconds(dur);
         foreach (GameObject obstacle in obstacles)
         {
-            if (obstacle.gameObject.GetComponent<Obstacle>() != null)
+            if (obstacle != null)
             {
-                obstacle.gameObject.GetComponent<Obstacle>().frozen = false;
+                if (obstacle.gameObject.GetComponent<Obstacle>() != null)
+                {
+                    obstacle.gameObject.GetComponent<Obstacle>().frozen = false;
+                }
+                //if (obstacle.gameObject.GetComponent<Animator>() != null)
+                //{
+                //    obstacle.gameObject.GetComponent<Animator>().enabled = true;
+                //}
+                //if (obstacle.gameObject.GetComponent<Rotate>() != null)
+                //{
+                //    obstacle.gameObject.GetComponent<Rotate>().enabled = true;
+                //}
             }
         }
         obstacleSpawner.gameObject.SetActive(true);

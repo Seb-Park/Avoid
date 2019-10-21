@@ -178,3 +178,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotation: -1
   rotationz: 0
+  obstacle: {fileID: 3688691157861506134}

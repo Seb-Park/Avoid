@@ -200,3 +200,4 @@ MonoBehaviour:
   x2: 1
   dx: 0.03
   xpos: 0
+  obstacle: {fileID: 7130775653552001119}

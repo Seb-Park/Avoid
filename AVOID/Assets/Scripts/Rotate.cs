@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rotate : MonoBehaviour {
 
     public float rotation, rotationz;
+    public Obstacle obstacle;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +14,10 @@ public class Rotate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        rotationz+=rotation;
-        gameObject.transform.eulerAngles= new Vector3(0,0,rotationz);
+        if (!obstacle.frozen)
+        {
+            rotationz += rotation;
+            gameObject.transform.eulerAngles = new Vector3(0, 0, rotationz);
+        }
 	}
 }

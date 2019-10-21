@@ -159,6 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotation: 1
   rotationz: 0
+  obstacle: {fileID: 411081532031455017}
 --- !u!1 &411081532031455123
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,3 +370,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotation: -1
   rotationz: 0
+  obstacle: {fileID: 411081532031455017}

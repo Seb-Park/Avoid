@@ -34,7 +34,7 @@ public class SkinOverlay : MonoBehaviour
             imageComponent.sprite = locked;
         }
         else{
-            imageComponent.sprite = unlockable;
+            imageComponent.sprite = locked;
         }
     }
 }

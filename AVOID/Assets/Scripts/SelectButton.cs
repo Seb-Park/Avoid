@@ -37,13 +37,16 @@ public class SelectButton : MonoBehaviour
         }
         else
         {
-            if (PlayerPrefs.GetInt("gems") >= sm.skinObjects[sm.currentHoveringSkin].price)
-            {
-                PlayerPrefs.SetInt("gems", PlayerPrefs.GetInt("gems") - sm.skinObjects[sm.currentHoveringSkin].price);
-                sm.unlockedSkins[sm.currentHoveringSkin] = true;
-                PlayerPrefs.SetInt("skin", sm.currentHoveringSkin);
-                SaveSystem.SaveBoolArray(sm.unlockedSkins, "skins.seb");
-            }
+            //if (PlayerPrefs.GetInt("gems") >= sm.skinObjects[sm.currentHoveringSkin].price)
+            //{
+            //    PlayerPrefs.SetInt("gems", PlayerPrefs.GetInt("gems") - sm.skinObjects[sm.currentHoveringSkin].price);
+            //    sm.unlockedSkins[sm.currentHoveringSkin] = true;
+            //    PlayerPrefs.SetInt("skin", sm.currentHoveringSkin);
+            //    SaveSystem.SaveBoolArray(sm.unlockedSkins, "skins.seb");
+            //}
+            //*****************************************************************************
+            //deduct a magic key from inventory
+            //if the player has no magic keys open the shop
         }
     }
 }

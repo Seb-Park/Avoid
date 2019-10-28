@@ -41,7 +41,7 @@ public class UnlockerMenu : MonoBehaviour
     public IEnumerator DisableUnlock(){
 
         unlockButton.GetComponent<Button>().interactable = false;
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(12);
         unlockButton.GetComponent<Button>().interactable = true;
 
     }

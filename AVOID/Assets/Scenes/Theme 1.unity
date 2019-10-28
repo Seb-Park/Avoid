@@ -7698,6 +7698,8 @@ MonoBehaviour:
   - {fileID: 6379935648377271288, guid: 25a44a83322ea4c69a6fa9dbb2b1a42c, type: 3}
   - {fileID: 6379935648377271288, guid: 506125823b1ba4c769261b8515c45c04, type: 3}
   - {fileID: 6379935648377271288, guid: 3c54cdcc1a8524bf58bc40813ac09f58, type: 3}
+  - {fileID: 6379935648377271288, guid: 440d2b00fc0634e9bb63902cceeccac2, type: 3}
+  - {fileID: 6379935648377271288, guid: 8ee2bb428d4b84d31b178abacc8939fb, type: 3}
   startText: {fileID: 1595432212}
   restartText: {fileID: 1415156222}
   firstBlock: {fileID: 5620942864731370395}

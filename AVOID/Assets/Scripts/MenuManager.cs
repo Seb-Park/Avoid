@@ -37,7 +37,9 @@ public class MenuManager : MonoBehaviour {
 
     public void showSkins(){
         skinsMenu.anchoredPosition = new Vector3(0, 0, 0);
+        skinManager.currentHoveringSkin = PlayerPrefs.GetInt("skin");
         skinsMenuScrolledImage.anchoredPosition = new Vector3(0, -skinManager.skinsPositions[PlayerPrefs.GetInt("skin")],0);
+        skinManager.currentHoveringSkin = PlayerPrefs.GetInt("skin");
         skinsMenu.gameObject.SetActive(true);
     }
 

@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public PlayerController playerController;
     public string videoID, rewardedVideoID;
     public GameObject flash;
+    public Animator cameraAnimator;
     //Admob ad;
 
 
@@ -98,11 +99,11 @@ public class GameManager : MonoBehaviour
                 musicSource.SetActive(true);
             }
         }
-        if (isStarted && Input.touchCount < 1&&!Input.GetMouseButton(0))
-        {
-            hasUntouched = true;
-            endGame();
-        }
+        //if (isStarted && Input.touchCount < 1&&!Input.GetMouseButton(0))
+        //{
+        //    hasUntouched = true;
+        //    endGame();
+        //}
         if (Input.touchCount < 1 && gameOver)
         {
             hasUntouched = true;
@@ -132,7 +133,14 @@ public class GameManager : MonoBehaviour
             //Handheld.Vibrate();
             Vibration.Vibrate(100);
         }
-        flash.SetActive(true);
+        if (PlayerPrefs.GetInt("isFlash") < 1)
+        {
+            flash.SetActive(true);
+        }
+        if (PlayerPrefs.GetInt("isShake") < 1)
+        {
+            cameraAnimator.SetTrigger("Shake");
+        }
         //Vibrate(200);
         scoreBG.SetActive(true);
         if ((int)score > PlayerPrefs.GetInt("AvoidHigh"))

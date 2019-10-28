@@ -6240,6 +6240,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Untagged
@@ -6327,6 +6328,25 @@ MonoBehaviour:
   colors:
   - {r: 1, g: 1, b: 0.86274517, a: 0}
   - {r: 1, g: 1, b: 1, a: 0}
+--- !u!95 &534669907
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3784b7ad912d642c880d51e40f1f0c64, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &589018200
 GameObject:
   m_ObjectHideFlags: 0
@@ -7532,6 +7552,7 @@ MonoBehaviour:
   videoID: ca-app-pub-5433175531947512/4371971610
   rewardedVideoID: ca-app-pub-5433175531947512/1809387455
   flash: {fileID: 773190229}
+  cameraAnimator: {fileID: 534669907}
 --- !u!4 &1055838552
 Transform:
   m_ObjectHideFlags: 0

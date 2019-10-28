@@ -23,7 +23,6 @@ public class UnlockerMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vaultAnimator.enabled = false;
         newSkinName.text = "";
         newOrOld.text = "";
     }
@@ -42,6 +41,7 @@ public class UnlockerMenu : MonoBehaviour
     public void Unlock(){
         if (PlayerPrefs.GetInt("gems") >= 100)
         {
+            unlockButton.GetComponent<Button>().enabled = false;
             bool wasSMOpenBefore = sm.gameObject.activeSelf;
             Debug.Log(sm.gameObject.activeSelf +"is the active state of the sm.");
             sm.gameObject.SetActive(true);
@@ -63,10 +63,10 @@ public class UnlockerMenu : MonoBehaviour
             //Debug.Log("you first have " + PlayerPrefs.GetInt("gems") + " gems.");
             PlayerPrefs.SetInt("gems", PlayerPrefs.GetInt("gems") - 100);
             //Debug.Log("you now have " + PlayerPrefs.GetInt("gems") + " gems.");
-            vaultAnimator.enabled = true;
+            vaultAnimator.SetTrigger("PlayUnlock");
             SaveSystem.SaveBoolArray(sm.unlockedSkins, "skins.seb");
             sm.gameObject.SetActive(wasSMOpenBefore);
-
+            unlockButton.GetComponent<Button>().enabled = true;
         }
     }
 }

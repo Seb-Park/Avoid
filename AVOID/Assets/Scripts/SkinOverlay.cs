@@ -9,11 +9,15 @@ public class SkinOverlay : MonoBehaviour
     public Image imageComponent;
     public int index;
     public SkinManager sm;
+    public GameObject parent;
+    public Skin parentSkin;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        parent = gameObject.transform.parent.gameObject;
+        parentSkin = parent.GetComponent<Skin>();
+        index = parentSkin.skinNumber;
     }
 
     // Update is called once per frame

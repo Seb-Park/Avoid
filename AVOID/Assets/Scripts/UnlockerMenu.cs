@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UnlockerMenu : MonoBehaviour
 {
-    public string[] names;
+    //public string[] names;
     public Sprite[] sprites;
 
     public Animator vaultAnimator;
@@ -38,10 +38,18 @@ public class UnlockerMenu : MonoBehaviour
         }
     }
 
+    public IEnumerator DisableUnlock(){
+
+        unlockButton.GetComponent<Button>().interactable = false;
+        yield return new WaitForSeconds(15);
+        unlockButton.GetComponent<Button>().interactable = true;
+
+    }
+
     public void Unlock(){
         if (PlayerPrefs.GetInt("gems") >= 100)
         {
-            unlockButton.GetComponent<Button>().enabled = false;
+            StartCoroutine(DisableUnlock());
             bool wasSMOpenBefore = sm.gameObject.activeSelf;
             Debug.Log(sm.gameObject.activeSelf +"is the active state of the sm.");
             sm.gameObject.SetActive(true);
@@ -58,7 +66,7 @@ public class UnlockerMenu : MonoBehaviour
 
             sm.unlockedSkins[unlockedIndex] = true;//unlock it
             newSkin.sprite = sprites[unlockedIndex]; //set the correct sprite
-            newSkinName.text = names[unlockedIndex];
+            newSkinName.text = sm.names[unlockedIndex];
 
             //Debug.Log("you first have " + PlayerPrefs.GetInt("gems") + " gems.");
             PlayerPrefs.SetInt("gems", PlayerPrefs.GetInt("gems") - 100);
@@ -66,7 +74,6 @@ public class UnlockerMenu : MonoBehaviour
             vaultAnimator.SetTrigger("PlayUnlock");
             SaveSystem.SaveBoolArray(sm.unlockedSkins, "skins.seb");
             sm.gameObject.SetActive(wasSMOpenBefore);
-            unlockButton.GetComponent<Button>().enabled = true;
         }
     }
 }

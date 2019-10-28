@@ -9,7 +9,7 @@ public class SkinManager : MonoBehaviour
     public float[] skinsPositions;
     public Skin[] skinObjects;
     public string[] names;
-    public int[] weights;
+    //public int[] weights;
 
     public int currentHoveringSkin;
     public ScrollRect skinsParentScroll;
@@ -70,7 +70,7 @@ public class SkinManager : MonoBehaviour
     }
 
     public void testWeighter(){
-        Debug.Log(names[CustomMath.WeightedRandomize(weights)]);
+        //Debug.Log(names[CustomMath.WeightedRandomize(weights)]);
     }
 
     void OnApplicationQuit()

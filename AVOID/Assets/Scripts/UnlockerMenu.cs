@@ -25,6 +25,12 @@ public class UnlockerMenu : MonoBehaviour
     {
         newSkinName.text = "";
         newOrOld.text = "";
+        for (int i = 0; i < weights.Length; i++){
+            if(sm.unlockedSkins[i]){
+                //makes it less likely for you to get a skin if you already have it
+                weights[i] = (int)(weights[i]/2.5f);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -65,6 +71,7 @@ public class UnlockerMenu : MonoBehaviour
             }
 
             sm.unlockedSkins[unlockedIndex] = true;//unlock it
+            Debug.Log(unlockedIndex);
             newSkin.sprite = sprites[unlockedIndex]; //set the correct sprite
             newSkinName.text = sm.names[unlockedIndex];
 

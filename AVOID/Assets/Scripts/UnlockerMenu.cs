@@ -13,6 +13,8 @@ public class UnlockerMenu : MonoBehaviour
     public Text newSkinName;
     public Text newOrOld;
 
+    public Button backButton;
+
     public GameObject unlockButton;
 
     public SkinManager sm;
@@ -45,10 +47,11 @@ public class UnlockerMenu : MonoBehaviour
     }
 
     public IEnumerator DisableUnlock(){
-
+        backButton.interactable = false;
         unlockButton.GetComponent<Button>().interactable = false;
         yield return new WaitForSeconds(12);
         unlockButton.GetComponent<Button>().interactable = true;
+        backButton.interactable = true;
 
     }
 

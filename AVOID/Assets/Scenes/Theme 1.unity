@@ -6470,6 +6470,9 @@ MonoBehaviour:
   - {fileID: 6101315969002795219, guid: 4327fdbfc3b054a3eac3fc84f15cbb05, type: 3}
   - {fileID: 5210273487784856206, guid: 65529ac4bb5bb44bb8497c403926a281, type: 3}
   - {fileID: 5210273487784856206, guid: bba14ca24f53f47f88fb592791086e6e, type: 3}
+  - {fileID: 6101315969002795219, guid: 476e71afd21254de791fa971126805cd, type: 3}
+  - {fileID: 6101315969002795219, guid: 0d7cebc590df041b7baa533f35e23259, type: 3}
+  - {fileID: 5210273487784856206, guid: 9eaf9851555be40618e626645e8cc432, type: 3}
   gemsCollected: 0
   frozen: 0
   obstacleSpawner: {fileID: 1265262893}
@@ -7455,7 +7458,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -7700,6 +7703,8 @@ MonoBehaviour:
   - {fileID: 6379935648377271288, guid: 3c54cdcc1a8524bf58bc40813ac09f58, type: 3}
   - {fileID: 6379935648377271288, guid: 440d2b00fc0634e9bb63902cceeccac2, type: 3}
   - {fileID: 6379935648377271288, guid: 8ee2bb428d4b84d31b178abacc8939fb, type: 3}
+  - {fileID: 365152151658512838, guid: bc94aac2bbd54478ab14233bcb72fb5b, type: 3}
+  - {fileID: 6379935648377271288, guid: 8d57d45924e8e49d8a6d8c0775935fad, type: 3}
   startText: {fileID: 1595432212}
   restartText: {fileID: 1415156222}
   firstBlock: {fileID: 5620942864731370395}

@@ -7,6 +7,7 @@ public class DropShadow : MonoBehaviour {
     public Vector3 offset = new Vector3(.1f, -.1f);
     public GameObject shadow;
     public Material material;
+    public bool isDynamic;
 
 	// Use this for initialization
 	void Start () {
@@ -61,6 +62,10 @@ public class DropShadow : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        moveFixedShadow();
+        if(isDynamic){
+            moveDynamicShadow();
+        }else{
+            moveFixedShadow();
+        }
     }
 }

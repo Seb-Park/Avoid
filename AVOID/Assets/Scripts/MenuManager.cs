@@ -87,6 +87,10 @@ public class MenuManager : MonoBehaviour {
         go.SetActive(true);
     }
 
+    public void setTheme(int themeNo){
+        PlayerPrefs.SetInt("theme", themeNo);
+    }
+
     public void openRatings(){
         Application.OpenURL("market://details?id=" + Application.identifier);
         PlayerPrefs.SetInt("hasRated", 1);

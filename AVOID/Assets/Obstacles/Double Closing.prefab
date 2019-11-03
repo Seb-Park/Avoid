@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6791941442119768039}
   - component: {fileID: 6791941442119768036}
   - component: {fileID: 6791941442119768037}
+  - component: {fileID: 389498454422760528}
   m_Layer: 0
   m_Name: RotateBlock (3)
   m_TagString: block
@@ -144,6 +145,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &389498454422760528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791941442119768043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b86f18833f441698d9729f932dca7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 6791941442119768038}
+  colorManager: {fileID: 0}
 --- !u!1 &6791941442130955208
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +172,7 @@ GameObject:
   - component: {fileID: 6791941442130955204}
   - component: {fileID: 6791941442130955205}
   - component: {fileID: 6791941442130955210}
+  - component: {fileID: 7334094681943371314}
   m_Layer: 0
   m_Name: RotateBlock (2)
   m_TagString: block
@@ -288,6 +304,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7334094681943371314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6791941442130955208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b86f18833f441698d9729f932dca7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 6791941442130955207}
+  colorManager: {fileID: 0}
 --- !u!1 &8797835945627580354
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,6 +331,7 @@ GameObject:
   - component: {fileID: 8797835945627580244}
   - component: {fileID: 8797835945627580306}
   - component: {fileID: 8797835945627580321}
+  - component: {fileID: 6929797442733773521}
   m_Layer: 0
   m_Name: RotateBlock
   m_TagString: block
@@ -396,7 +427,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -432,6 +463,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6929797442733773521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8797835945627580354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b86f18833f441698d9729f932dca7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8797835945627580278}
+  colorManager: {fileID: 0}
 --- !u!1 &8797835945627580355
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +531,8 @@ MonoBehaviour:
   destructionPoint: {x: 0, y: -10, z: 0}
   gm: {fileID: 0}
   frozen: 0
+  spriteRenderer: {fileID: 0}
+  colorManager: {fileID: 0}
 --- !u!95 &8797835945627580351
 Animator:
   serializedVersion: 3
@@ -518,6 +565,7 @@ GameObject:
   - component: {fileID: 8797835945627580247}
   - component: {fileID: 8797835945627580309}
   - component: {fileID: 8797835945627580320}
+  - component: {fileID: 6644618983869814405}
   m_Layer: 0
   m_Name: RotateBlock (1)
   m_TagString: block
@@ -649,3 +697,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6644618983869814405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8797835945627580357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b86f18833f441698d9729f932dca7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 8797835945627580279}
+  colorManager: {fileID: 0}

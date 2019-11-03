@@ -10,6 +10,8 @@ public class Obstacle : MonoBehaviour {
     public Vector3 destructionPoint = new Vector3(0,-20,0);
     public GameObject gm;
     public bool frozen;
+    public SpriteRenderer spriteRenderer;
+    public ColorManager colorManager;
 
 
 	// Use this for initialization

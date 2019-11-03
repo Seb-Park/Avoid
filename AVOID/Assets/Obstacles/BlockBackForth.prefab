@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7130775653552001177}
   - component: {fileID: 7130775653552001214}
   - component: {fileID: 7130775653552001118}
+  - component: {fileID: -6426529033794214906}
   m_Layer: 0
   m_Name: BlockBackForth
   m_TagString: block
@@ -103,6 +104,8 @@ MonoBehaviour:
   destructionPoint: {x: 0, y: -10, z: 0}
   gm: {fileID: 0}
   frozen: 0
+  spriteRenderer: {fileID: 7130775653552001185}
+  colorManager: {fileID: 0}
 --- !u!114 &7130775653552001104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,3 +204,17 @@ MonoBehaviour:
   dx: 0.03
   xpos: 0
   obstacle: {fileID: 7130775653552001119}
+--- !u!114 &-6426529033794214906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7130775653552001268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b86f18833f441698d9729f932dca7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 7130775653552001185}
+  colorManager: {fileID: 0}

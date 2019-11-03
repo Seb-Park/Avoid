@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2092627899028260201}
   - component: {fileID: 2092627899028260243}
   - component: {fileID: 2092627899028260263}
+  - component: {fileID: 1706041001606055719}
   m_Layer: 0
   m_Name: Block
   m_TagString: block
@@ -144,6 +145,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1706041001606055719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092627899028260290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b86f18833f441698d9729f932dca7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  colorManager: {fileID: 0}
 --- !u!1 &2092627899028260316
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,6 +172,7 @@ GameObject:
   - component: {fileID: 2092627899028260200}
   - component: {fileID: 2092627899028260242}
   - component: {fileID: 2092627899028260262}
+  - component: {fileID: 7435257654777975040}
   m_Layer: 0
   m_Name: Block (1)
   m_TagString: block
@@ -288,6 +304,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7435257654777975040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092627899028260316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94b86f18833f441698d9729f932dca7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  colorManager: {fileID: 0}
 --- !u!1 &2092627899028260317
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,6 +370,8 @@ MonoBehaviour:
   destructionPoint: {x: 0, y: -10, z: 0}
   gm: {fileID: 0}
   frozen: 0
+  spriteRenderer: {fileID: 0}
+  colorManager: {fileID: 0}
 --- !u!95 &2092627899028260315
 Animator:
   serializedVersion: 3

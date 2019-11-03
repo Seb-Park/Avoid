@@ -5557,6 +5557,7 @@ MonoBehaviour:
   offset: {x: 0.1, y: -0.1, z: 0}
   shadow: {fileID: 0}
   material: {fileID: 2100000, guid: 7f5e9fa88ac05495a9bbec12c460ec0e, type: 2}
+  isDynamic: 0
 --- !u!61 &251051936
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6455,6 +6456,8 @@ MonoBehaviour:
   gm: {fileID: 1055838551}
   gemEffect: {fileID: 7555532810720556462, guid: 69d019084928845029c3a6c431485bcd,
     type: 3}
+  blueGemEffect: {fileID: 7555532810720556462, guid: 452d48826a7db40bf966681a5ca64a52,
+    type: 3}
   skins:
   - {fileID: 9158573813669020785, guid: 093647a5afdbb4417b97c8f6da492037, type: 3}
   - {fileID: 5210273487784856206, guid: 4b4afed71a4704e52bd1d8aac8cbfe95, type: 3}
@@ -6638,6 +6641,7 @@ MonoBehaviour:
   offset: {x: 0.1, y: -0.1, z: 0}
   shadow: {fileID: 0}
   material: {fileID: 2100000, guid: 7f5e9fa88ac05495a9bbec12c460ec0e, type: 2}
+  isDynamic: 0
 --- !u!212 &665727836
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7965,6 +7969,7 @@ MonoBehaviour:
   crystal: {fileID: 5283016839111663723, guid: 25c74632bb0e4492293a4616856189f4, type: 3}
   powerups:
   - {fileID: 5283016839111663723, guid: 0c7fea68b74cb4558940fa658ef5c4ea, type: 3}
+  - {fileID: 5283016839111663723, guid: e845b2a5540ef43d18441afc361f597b, type: 3}
 --- !u!4 &1265262894
 Transform:
   m_ObjectHideFlags: 0
@@ -9329,6 +9334,7 @@ MonoBehaviour:
   offset: {x: 0.02, y: -0.02, z: 0}
   shadow: {fileID: 0}
   material: {fileID: 2100000, guid: 7f5e9fa88ac05495a9bbec12c460ec0e, type: 2}
+  isDynamic: 0
 --- !u!114 &5620942864731370293
 MonoBehaviour:
   m_ObjectHideFlags: 0

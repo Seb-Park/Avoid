@@ -223,6 +223,10 @@ public class GameManager : MonoBehaviour
         {
                 Destroy(go);
         }
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("BlueCrystal"))
+        {
+            Destroy(go);
+        }
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("freezeTime"))
         {
             Destroy(go);

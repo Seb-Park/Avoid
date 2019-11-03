@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     public Vector3 pixelTouchPosition;
     public Camera camera;
     public GameManager gm;
-    public GameObject gemEffect;
+    public GameObject gemEffect, blueGemEffect;
     public GameObject[] skins;
     public int gemsCollected;
     public bool frozen;
@@ -129,6 +129,18 @@ public class PlayerController : MonoBehaviour {
                 Vibration.Vibrate(20);
             }
             Instantiate(gemEffect, transform.position, Quaternion.identity);
+
+        }
+
+        if (collision.gameObject.CompareTag("BlueCrystal"))
+        {
+            Destroy(collision.gameObject);
+            gemsCollected+=10;
+            if (PlayerPrefs.GetInt("isVibrate") < 1)
+            {
+                Vibration.Vibrate(20);
+            }
+            Instantiate(blueGemEffect, transform.position, Quaternion.identity);
 
         }
         if (collision.gameObject.CompareTag("block"))

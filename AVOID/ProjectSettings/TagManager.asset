@@ -8,6 +8,7 @@ TagManager:
   - Crystal
   - freezeTime
   - ColorManager
+  - BlueCrystal
   layers:
   - Default
   - TransparentFX

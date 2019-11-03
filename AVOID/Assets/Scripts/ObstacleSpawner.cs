@@ -40,6 +40,10 @@ public class ObstacleSpawner : MonoBehaviour {
             if(randomCrystal == 4){
                 Instantiate(powerups[0], spawnPoint.transform.position, Quaternion.identity);
             }
+            if (randomCrystal == 2)
+            {
+                Instantiate(powerups[1], spawnPoint.transform.position, Quaternion.identity);
+            }
 
         }
     }

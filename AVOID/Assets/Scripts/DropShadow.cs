@@ -31,6 +31,8 @@ public class DropShadow : MonoBehaviour {
         sr.material = material;
         sr.sortingLayerName = renderer.sortingLayerName;
         sr.sortingOrder = -10;
+        Color black = new Color(0, 0, 0);
+        sr.color = black;
     }
 
     public void createFixedShadow(){
@@ -45,6 +47,8 @@ public class DropShadow : MonoBehaviour {
         sr.material = material;
         sr.sortingLayerName = renderer.sortingLayerName;
         sr.sortingOrder = -10;
+        Color black = new Color(0, 0, 0);
+        sr.color = black;
     }
 	
     public void moveFixedShadow(){

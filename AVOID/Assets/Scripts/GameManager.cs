@@ -219,6 +219,14 @@ public class GameManager : MonoBehaviour
                 Destroy(go);
             }
         }
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Crystal"))
+        {
+                Destroy(go);
+        }
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("freezeTime"))
+        {
+            Destroy(go);
+        }
         revivesLeft -= 1;
         int currentGems = PlayerPrefs.GetInt("gems");
         PlayerPrefs.SetInt("gems", currentGems - player.GetComponent<PlayerController>().gemsCollected);
